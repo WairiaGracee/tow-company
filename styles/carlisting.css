@@ -1,6 +1,6 @@
 .hero{
     height: 350px;
-    background: linear-gradient(rgba(2, 50, 141, 0.4),rgba(1, 73, 206, 0.4)), url(../images/karsten-wurth-rafblRbne3o-unsplash.jpg);
+    background: linear-gradient(rgba(2, 50, 141, 0.4),rgba(1, 73, 206, 0.4)), url(../assets/karsten-wurth-rafblRbne3o-unsplash.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
