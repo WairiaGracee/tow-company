@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Auto Services</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/signup.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/service.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Faculty+Glyphic&family=Forum&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Sans+Condensed:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>B<span>M</span></h1>
+          <p>tow</p>
+        </div>
+        <div class="links-wrapper">
+          <ul>
+            <li><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
+            <li><a class="nav-link" href="AboutUs.html">AboutUs</a></li>
+            <li><a class="nav-link" href="service.html">Services</a></li>
+            <li><a class="nav-link" href="carlisting.html"> Car listing</a></li>
+            <li><a class="nav-link" href="contact.html">ContactUs</a></li>
+            <li><a class="nav-link" href="#"><i id="openPopUp" class="bi bi-person-fill"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div id="popupWindow" class="popup">
+    <div class="popup-content">
+      <span id="closeBtn" class="close">&times;</span>
+                <!--login form details -->
+                <div class="form-section">
+                  <h1>Log in</h1>
+                      <a href="#" class="btn-google">
+                          <img src="images/Untitled design.jpg" alt="">
+                          <p>Continue with Google</p>
+                      </a>
+                      <a href="#" class="btn-google">
+                          <i class="bi bi-facebook" id="fb"></i>
+                          <p>Continue with Facebook</p>
+                      </a>
+                      <a href="#" class="btn-google">
+                          <i class="bi bi-apple"></i>
+                          <p>Continue with Apple</p>
+                      </a>
+      
+                  <hr class="divider">
+      
+              <form id="loginForm">
+                  <div class="form-group">
+                      <label for="username">Email:</label>
+                      <input type="text" id="username" name="username" placeholder="Enter your Email.." required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" placeholder="Enter your password..." required>
+                  </div>
+                  <button type="submit">Login</button>
+                  <p id="errorMessage" class="error-message"></p>
+              </form>
+              <p>
+                <a href="#" id="forgotPassword" class="forgot-password-link">Forgot Password?</a>
+              </p>
+              <p>
+                  By continuing with Google, Apple, or Email, you agree to Todoist's <br>
+                  <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+              </p>
+      
+              <hr class="divider">
+      
+              <p>Don't have an account? <a href="#" id="signup">Sign Up</a></p>
+          </div>
+    </div>
+  </div>
+<!-- Reset Password Popup -->
+<div class="popup" id="popupResetPassword">
+  <div class="popup-content">
+      <span class="close">&times;</span>
+      <div class="form-section2">
+          <h1>Reset Password</h1>
+          <p>Please enter your email address to reset your password.</p>
+          <form id="resetPasswordForm">
+              <div class="form-group">
+                  <label for="email">Email Address:</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+              <button type="submit">Send Reset Link</button>
+          </form>
+          <p>
+              <a href="#" class="back-to-login">Back to Login</a>
+          </p>
+      </div>
+  </div>
+</div>
+
+  <!-- signup page -->
+        <div class="popup" id="popupsignup">
+          <div class="popup-content">
+            <span id="closeBtn" class="close">&times;</span>
+          <div class="form-section">
+              <h1>Sign Up</h1>
+  
+              <a href="#" class="btn-google">
+                <img src="images/Untitled design.jpg" alt="">
+                  <p>Continue with Google</p>
+              </a>
+              <a href="#" class="btn-google">
+                  <i class="bi bi-facebook" id="fb"></i>
+                  <p>Continue with Facebook</p>
+              </a>
+              <a href="#" class="btn-google">
+                  <i class="bi bi-apple"></i>
+                  <p>Continue with Apple</p>
+              </a>
+  
+          <hr class="divider">
+  
+              <form id="signupForm">
+                  <div class="form-group">
+                      <label for="newUsername">Email:</label>
+                      <input type="text" id="newUsername" name="newUsername" placeholder="Enter your Email.." required>
+                  </div>
+                  <div class="form-group">
+                      <label for="newPassword">Password:</label>
+                      <input type="password" id="newPassword" name="newPassword" placeholder="Enter a password" required>
+                  </div>
+                  <button type="submit">Sign Up</button>
+                  <p id="signupMessage" class="success-message"></p>
+              </form>
+  
+              <p>
+                  By continuing with Google, Apple, or Email, you agree to Todoist's <br>
+                  <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+              </p>
+      
+              <hr class="divider">
+              
+              
+              <p>Already have an account? <a href="#" id="goBackToLogin">Go to Login</a></p>
+          </div>
+          </div>
+        </div>
+        <p id="signupMessage" class="success-message"></p>
+  <!-- Page Header & Introduction -->
+  <div class="hero">
+    <div class="container">
+        <div class="content">
+            <h1>Request Auto Services & Repairs with Ease</h1>
+            <p>Easily request auto services and repairs hassle-free,
+              ensuring your vehicle gets the care it needs with just a few clicks.</p>
+              <button id="start">Get Started</button>
+        </div>
+        <div class="content-cta-wrap">
+          <div class="content-cta">
+            <i class="fa-solid fa-headset"></i>
+              <div class="words">
+                <p>24/7 EMERGENCY TOWING</p>
+                <strong>(+61) 476 993 310</strong>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+<!-- Description -->
+<div class="description">
+    <div class="desc-wrapper">
+      <div class="description-content">
+        <div class="desc-container">
+          <div class="words-desc">
+            <h2>Descriptions</h2>
+          <p class="bluep">We provide fast, reliable, and professional towing and auto services 
+            whenever you need them. From emergency roadside assistance to expert 
+            repairs and car sales, we've got you covered—anytime, anywhere.</p>
+            <p class="bluep">
+              Whether you're dealing with a sudden breakdown, a flat tire,
+              or need a vehicle transported safely, our team is ready to assist you 24/7.
+              With a commitment to efficiency and customer satisfaction, we ensure every 
+              tow is handled with care, getting you back on the road as quickly as possible.
+          </p>
+          <p class="bluep">
+            Whether you're dealing with a sudden breakdown, a flat tire,
+            or need a vehicle transported safely, our team is ready to assist you 24/7.
+            With a commitment to efficiency and customer satisfaction, we ensure every 
+            tow is handled with care, getting you back on the road as quickly as possible.
+        </p>
+          </div>
+          <div class="imgs-desc">
+            <img src="images/mechanic-checking-oil-level-car-engine.jpg" alt="">
+            <img src="images/bipoc-specialist-car-service-using-professional-mechanical-tool-repair-broken-ignition-system-licensed-specialist-garage-fixing-client-automobile-ensuring-optimal-automotive-performance.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="desc-content-pages">
+          <div class="service-pages">
+            <div class="head">
+              <p>Other Service</p>
+            <div class="hor-rule-this"></div>
+            </div>
+            <div class="service-direct">
+              <ul>
+                <li><a href="towing.html">Motorcyle Towing <i class="bi bi-arrow-up-right"></i></a></li>
+                <li><a href="jumpstart.html">Jump Start <i class="bi bi-arrow-up-right"></i></a></li>
+                <li><a href="repair-maintain.html">Auto Repairs & Maintenance <i class="bi bi-arrow-up-right"></i></a></li>
+                <li><a href="buy-sell.html">Buy & Sell Cars <i class="bi bi-arrow-up-right"></i></a></li>
+                <li><a href="roadside.html">Roadside Assistance <i class="bi bi-arrow-up-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+  <!-- Trust Badges -->
+  <div class="trust-badges">
+    <div class="container">
+      <div class="badges-content">
+        <div class="badge-cont">
+          <p>WHY CHOOSE US</p>
+          <h2>Call us for a seamless moving experience.</h2>
+          <p class="second">"Reliable 24/7 towing and roadside assistance—fast,
+            safe, and hassle-free. Call us now to get you back on 
+            track with ease and confidence!"</p>
+            <img src="images/handsome-middle-age-man-working-towing-service-road-roadside-assistance-concept_473712-2053.png" alt="">
+        </div>
+        <div class="qualify">
+          <div class="qualify-card">
+            <i class="bi bi-check2-circle"></i>
+            <h2>Trusted & Professional</h2>
+            <p>"Reliable experts delivering top-quality service with care and professionalism."</p>
+          </div>
+          <div class="qualify-card">
+            <i class="bi bi-credit-card-fill"></i>
+            <h2>Flexible Payment Options</h2>
+            <p>"Convenient and flexible payment options to suit your needs!"</p>
+          </div>
+          <div class="qualify-card">
+            <i class="fa-solid fa-medal"></i>
+            <h2>Satisfaction Guarantee</h2>
+            <p>"Your satisfaction is our promise—quality service, every time!"</p>
+          </div>
+          <div class="qualify-card">
+            <i class="fa-solid fa-headset"></i>
+            <h2>Friendly Support</h2>
+            <p>"Always here to help—friendly, reliable, and dedicated to your needs!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Testimonials -->
+    <div class="testimonials">
+      <div class="container">
+        <div class="testimonial-content">
+          <h2>What Our Customers Are Saying</h2>
+      <div class="reviews">
+        <div class="review">
+          <div class="review-img">
+            <img src="images/March 2023.jpeg" alt="">
+          </div>
+          <p>"Quick response, professional service! Highly recommend."</p>
+          <span>- Sarah L.</span>
+        </div>
+        <div class="review">
+          <div class="review-img">
+            <img src="images/download.jpeg" alt="">
+          </div>
+          <p>"They fixed my car in no time and at a fair price. Will definitely use them again!"</p>
+          <span>- Mike T.</span>
+        </div>
+      </div>
+      <div class="ratings">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>4.8/5</span>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- call to action -->
+  <div class="calltoaction">
+    <div class="container">
+      <div class="call-content">
+        <div class="cta-content">
+          <h2>From Breakdowns to Accidents – We’ve Got You Covered</h2>
+          <h3>Make your call now!</h3>
+          <button id="start">Get Started</button>
+        </div>
+        <div class="image-cta">
+          <img src="images/Towing_Services_In_Navi_Mumbai_Call_7028064871-removebg-preview.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Accordion -->
+    <div class="accordion-wrapper">
+      <div class="container">
+        <div class="accord-wrap">
+          <p class="red">COMMON QUESTIONS</p>
+          <h2>Most Popular Questions</h2>
+          <p class="quote">"Quality is never an accident; it is always the result of intelligent effort." – John Ruskin</p>
+        <div class="accordion-cols">
+          <div class="accordion-col">
+            <ul class="accordion">
+              <li>
+                  <input type="radio" name="accordion" id="first" checked>
+                  <label for="first">What services does your towing company offer?</label>
+                  <div class="content">
+                      <p>
+                          We provide 24/7 towing services, roadside assistance, jump starts, tire changes, fuel delivery, and vehicle recovery for all types of vehicles.
+                      </p>
+                  </div>
+              </li>
+              <li>
+                  <input type="radio" name="accordion" id="second">
+                  <label for="second">How long does it take for a tow truck to arrive?</label>
+                  <div class="content">
+                      <p>
+                          Our average response time is 30 minutes or less, depending on your location and traffic conditions. We strive to get to you as quickly as possible.
+                      </p>
+                  </div>
+              </li>
+              <li>
+                  <input type="radio" name="accordion" id="third">
+                  <label for="third">Do you offer long-distance towing?</label>
+                  <div class="content">
+                      <p>
+                          Yes, we provide both local and long-distance towing services. Contact us for a quote based on your destination.
+                      </p>
+                  </div>
+              </li>
+              <li>
+                  <input type="radio" name="accordion" id="fourth">
+                  <label for="fourth">What should I do if my car breaks down?</label>
+                  <div class="content">
+                      <p>
+                          If your car breaks down, move to a safe location if possible, turn on your hazard lights, and call our 24/7 towing service. We will dispatch a tow truck to assist you immediately.
+                      </p>
+                  </div>
+              </li>
+          </ul>
+          
+          </div>
+          <div class="accordion-col">
+            <ul class="accordion">
+              <li>
+                  <input type="radio" name="accordion" id="fifth" checked>
+                  <label for="fifth">What services does your towing company offer?</label>
+                  <div class="content">
+                      <p>
+                          We provide 24/7 towing services, roadside assistance, jump starts, tire changes, fuel delivery, and vehicle recovery for all types of vehicles.
+                      </p>
+                  </div>
+              </li>
+              <li>
+                  <input type="radio" name="accordion" id="sixth">
+                  <label for="sixth">How long does it take for a tow truck to arrive?</label>
+                  <div class="content">
+                      <p>
+                          Our average response time is 30 minutes or less, depending on your location and traffic conditions. We strive to get to you as quickly as possible.
+                      </p>
+                  </div>
+              </li>
+              <li>
+                  <input type="radio" name="accordion" id="seventh">
+                  <label for="seventh">Do you offer long-distance towing?</label>
+                  <div class="content">
+                      <p>
+                          Yes, we provide both local and long-distance towing services. Contact us for a quote based on your destination.
+                      </p>
+                  </div>
+              </li>
+              <li>
+                  <input type="radio" name="accordion" id="eighth">
+                  <label for="eighth">What should I do if my car breaks down?</label>
+                  <div class="content">
+                      <p>
+                          If your car breaks down, move to a safe location if possible, turn on your hazard lights, and call our 24/7 towing service. We will dispatch a tow truck to assist you immediately.
+                      </p>
+                  </div>
+              </li>
+          </ul>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <!-- Contact Section -->
+  <div class="contact">
+    <h2>Need Help Now? We're Here for You!</h2>
+    <p>Need immediate towing? Call us now: <strong>(123) 456-7890</strong></p>
+    <a href="chat.html" class="btn-primary">Live Chat</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="desc-wrapper">
+          <div class="col1">
+            <div class="logo">
+              <h1>B<span>M</span></h1>
+              <p>tow</p>
+            </div>
+            <p>Reliable 24/7 towing and roadside assistance—fast, safe, and hassle-free. Call us now to get you back on track with ease and confidence!
+            </p>
+          </div>
+          <div class="col2">
+            <div class="column">
+              <div class="col-cont">
+                <h2>Company</h2>
+              <div class="links">
+                <a href="home.html">Home</a>
+                <a href="service.html">Services</a>
+                <a href="carMarketplace.html">Marketplace</a>
+                <a href="carlisting.html">Car Listing</a>
+              </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="col-cont">
+                <h2>Support</h2>
+              <div class="links">
+                <a href="chat.html">HelpCenter</a>
+                <a href="AboutUs.html">FAQ</a>
+                <a href="contact.html">ContactUs</a>
+              </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="column3">
+                <h2>Get In Touch</h2>
+                <p>1 McKenzie Pl, Yarrawonga NT 0830, Australia</p>
+                <p><i class="bi bi-envelope"></i> : bmtowing@gmail.com</p>
+                <p><i class="bi bi-telephone-plus-fill"></i> : (+61) 476 993 310</p>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hor-rule"></div>
+        <div class="copyright">
+          <p>&copy; 2025 BM Towing and Auto Services. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("start").addEventListener("click",function(){
+      window.location.href="contact.html";
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+
+var popup = document.getElementById("popupWindow");
+var openPopupBtn = document.getElementById("openPopUp");
+var closeBtn = document.getElementById("closeBtn");
+
+var popupsign = document.getElementById("popupsignup");
+var signupBtn = document.getElementById("signup");
+var goBackToLoginBtn = document.getElementById("goBackToLogin");
+
+var closeBtns = document.querySelectorAll(".close");
+
+var signupForm = document.getElementById("signupForm");
+var signupMessage = document.getElementById("signupMessage");
+
+popup.style.display = "none";
+popupsign.style.display = "none";
+
+if (openPopupBtn) {
+    openPopupBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        popup.style.display = "flex";
+        popupsign.style.display = "none";
+    });
+}
+// Elements for Reset Password popup
+var popupReset = document.getElementById("popupResetPassword");
+var forgotPasswordBtn = document.getElementById("forgotPassword"); // Open reset password
+var goBackToLoginBtns = document.querySelectorAll(".back-to-login"); // Back to login
+var resetPasswordForm = document.getElementById("resetPasswordForm");
+var closeBtns = document.querySelectorAll(".close");
+// Open forgot password popup
+if (forgotPasswordBtn) {
+forgotPasswordBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    popup.style.display = "none";
+    popupsign.style.display = "none";
+    popupReset.style.display = "flex";
+});
+}
+
+// Switch back to login popup from reset password
+goBackToLoginBtns.forEach(function (btn) {
+btn.addEventListener("click", function (event) {
+    event.preventDefault();
+    popup.style.display = "flex";
+    popupsign.style.display = "none";
+    popupReset.style.display = "none";
+});
+});
+
+// Handle password reset form submission
+if (resetPasswordForm) {
+resetPasswordForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    alert("Password reset link has been sent to your email!");
+    popupReset.style.display = "none"; // Close popup after submitting
+    popup.style.display = "flex"; // Show login form again
+});
+}
+
+if (signupBtn) {
+    signupBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        popup.style.display = "none"; 
+        popupsign.style.display = "flex";
+    });
+}
+closeBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        popup.style.display = "none";
+        popupsign.style.display = "none";
+        popupReset.style.display = "none";
+    });
+});
+
+// Switch back to login form
+if (goBackToLoginBtn) {
+    goBackToLoginBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        popupsign.style.display = "none"; // Hide signup
+        popup.style.display = "flex"; // Show login again
+    });
+}
+if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
+        popupsign.style.display = "none";
+    });
+}
+
+window.addEventListener("click", function (event) {
+    if (event.target === popup || event.target === popupsign) {
+        popup.style.display = "none";
+        popupsign.style.display = "none";
+    }
+});
+if (signupForm) {
+    signupForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form from reloading the page
+
+        // Simulating successful signup
+        signupMessage.textContent = "Sign Up Successful!";
+        signupMessage.style.color = "green";
+        
+        // Redirect to dashboard after 2 seconds
+        setTimeout(function () {
+            window.location.href = "dashboard.html"; // Change this to your actual dashboard page
+        }, 2000);
+    });
+}
+});
+
+  </script>
+</body>
+</html>

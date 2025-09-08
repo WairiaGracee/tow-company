@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast & Reliable Towing Services</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/signup.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Faculty+Glyphic&family=Forum&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Sans+Condensed:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>B<span>M</span></h1>
+          <p>tow</p>
+        </div>
+        <div class="links-wrapper">
+          <ul>
+            <li><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
+            <li><a class="nav-link" href="AboutUs.html">AboutUs</a></li>
+            <li><a class="nav-link" href="service.html">Services</a></li>
+            <li><a class="nav-link" href="carlisting.html"> Car listing</a></li>
+            <li><a class="nav-link" href="contact.html">ContactUs</a></li>
+            <li><a class="nav-link" href="registration.html"><i class="bi bi-person-fill"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div id="popupWindow" class="popup">
+    <div class="popup-content">
+      <span id="closeBtn" class="close">&times;</span>
+                <!--login form details -->
+                <div class="form-section">
+                  <h1>Log in</h1>
+                      <a href="#" class="btn-google">
+                          <img src="images/Untitled design.jpg" alt="">
+                          <p>Continue with Google</p>
+                      </a>
+                      <a href="#" class="btn-google">
+                          <i class="bi bi-facebook" id="fb"></i>
+                          <p>Continue with Facebook</p>
+                      </a>
+                      <a href="#" class="btn-google">
+                          <i class="bi bi-apple"></i>
+                          <p>Continue with Apple</p>
+                      </a>
+      
+                  <hr class="divider">
+      
+              <form id="loginForm">
+                  <div class="form-group">
+                      <label for="username">Email:</label>
+                      <input type="text" id="username" name="username" placeholder="Enter your Email.." required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" placeholder="Enter your password..." required>
+                  </div>
+                  <button type="submit">Login</button>
+                  <p id="errorMessage" class="error-message"></p>
+              </form>
+              <p>
+                <a href="#" id="forgotPassword" class="forgot-password-link">Forgot Password?</a>
+              </p>
+              <p>
+                  By continuing with Google, Apple, or Email, you agree to Todoist's <br>
+                  <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+              </p>
+      
+              <hr class="divider">
+      
+              <p>Don't have an account? <a href="#" id="signup">Sign Up</a></p>
+          </div>
+    </div>
+  </div>
+<!-- Reset Password Popup -->
+<div class="popup" id="popupResetPassword">
+  <div class="popup-content">
+      <span class="close">&times;</span>
+      <div class="form-section2">
+          <h1>Reset Password</h1>
+          <p>Please enter your email address to reset your password.</p>
+          <form id="resetPasswordForm">
+              <div class="form-group">
+                  <label for="email">Email Address:</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+              <button type="submit">Send Reset Link</button>
+          </form>
+          <p>
+              <a href="#" class="back-to-login">Back to Login</a>
+          </p>
+      </div>
+  </div>
+</div>
+
+  <!-- signup page -->
+        <div class="popup" id="popupsignup">
+          <div class="popup-content">
+            <span id="closeBtn" class="close">&times;</span>
+          <div class="form-section">
+              <h1>Sign Up</h1>
+  
+              <a href="#" class="btn-google">
+                <img src="images/Untitled design.jpg" alt="">
+                  <p>Continue with Google</p>
+              </a>
+              <a href="#" class="btn-google">
+                  <i class="bi bi-facebook" id="fb"></i>
+                  <p>Continue with Facebook</p>
+              </a>
+              <a href="#" class="btn-google">
+                  <i class="bi bi-apple"></i>
+                  <p>Continue with Apple</p>
+              </a>
+  
+          <hr class="divider">
+  
+              <form id="signupForm">
+                  <div class="form-group">
+                      <label for="newUsername">Email:</label>
+                      <input type="text" id="newUsername" name="newUsername" placeholder="Enter your Email.." required>
+                  </div>
+                  <div class="form-group">
+                      <label for="newPassword">Password:</label>
+                      <input type="password" id="newPassword" name="newPassword" placeholder="Enter a password" required>
+                  </div>
+                  <button type="submit">Sign Up</button>
+                  <p id="signupMessage" class="success-message"></p>
+              </form>
+  
+              <p>
+                  By continuing with Google, Apple, or Email, you agree to Todoist's <br>
+                  <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+              </p>
+      
+              <hr class="divider">
+              
+              
+              <p>Already have an account? <a href="#" id="goBackToLogin">Go to Login</a></p>
+          </div>
+          </div>
+        </div>
+        <p id="signupMessage" class="success-message"></p>
+  <!-- Page Header & Introduction -->
+  <section class="container mt-5">
+    <h1 class = "text-center text-primary fw-bold">Fast & Reliable Towing Services</h1>
+    <p class="text-center lead" >Enter your pick-up and drop-off locations below to get an instant towing estimate. We’re available 24/7 for emergency towing and roadside assistance.</p>
+  </section>
+
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg p-4">
+           
+              <!-- Towing Request Form -->
+            <form class="mb-3">
+              <!-- Customer Information Section -->
+              <fieldset >
+                <legend>Customer Information</legend>
+                <label class="form-label" for="full-name">Full Name</label>
+                <input type="text" class="form-control" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+                <label class="form-label" for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder ="Enter phone number" required>
+
+                <label class="form-label" for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" place  required>
+              </fieldset>
+
+              <!-- Vehicle Details Section -->
+              <fieldset>
+                <legend>Vehicle Details</legend>
+                <label class="form-label" for="car-make">Car Make & Model</label>
+                <input type="text" class="form-control" id="car-make" name="car-make" required>
+
+                <label class="form-label" for="license-plate">License Plate Number (optional)</label>
+                <input type="text" class="form-control" id="license-plate" name="license-plate">
+
+                <div class="mb-3">
+                  <label class="form-label">Vehicle Condition</label>
+                  <div class="btn-group d-flex" role="group">
+                      <input type="radio" class="btn-check" name="vehicle_condition" id="operational" checked>
+                      <label class="btn btn-outline-primary" for="operational">Operational</label>
+              
+                      <input type="radio" class="btn-check" name="vehicle_condition" id="non-operational">
+                      <label class="btn btn-outline-primary" for="non-operational">Non-Operational</label>
+              
+                      <input type="radio" class="btn-check" name="vehicle_condition" id="accident">
+                      <label class="btn btn-outline-primary" for="accident">Accident</label>
+              
+                      <input type="radio" class="btn-check" name="vehicle_condition" id="flat-tire">
+                      <label class="btn btn-outline-primary" for="flat-tire">Flat Tire/Battery Dead</label>
+                  </div>
+              </div>
+              </fieldset>
+
+              <!-- Towing Details Section -->
+              <fieldset>
+                <legend>Towing Details</legend>
+                <label class="mb-3 d-flex" for="pickup-location">Pick-Up Location</label>
+                <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter the address or use your current location" required>
+                <button type="button" class="mb-3 d-flex" id="use-location"><i class="fas fa-location-arrow"></i> Use My Location</button>
+
+                <label class="mb-3" for="dropoff-location">Drop-Off Location</label>
+                <input type="text" class="form-control" id="dropoff-location" name="dropoff-location" required>
+
+                <label class="mb-3" for="distance">Total Distance</label>
+                <input type="text" class="form-control"  id="distance" name="distance" readonly>
+
+                <label class="mb-3" for="pickup-time">Preferred Pick-Up Time</label>
+                <input type="datetime-local" class="form-control" id="pickup-time" name="pickup-time" required>
+
+                <label class="mb-3 d-flex" for="urgency">Urgency Level</label>
+                <select id="urgency" class="form-control" name="urgency" required>
+                  <option value="standard">Standard (Within 2 hours)</option>
+                  <option value="urgent">Urgent (Within 1 hour)</option>
+                  <option value="emergency">Emergency (Immediate Dispatch)</option>
+                </select>
+              </fieldset>
+
+              <!-- Additional Instructions Section -->
+              <fieldset>
+                <legend>Additional Instructions</legend>
+                <label for="special-instructions">Special Instructions</label>
+                <textarea id="special-instructions" name="special-instructions" placeholder="Example: Car is in underground parking, or Vehicle is stuck in mud."></textarea>
+
+                <label for="photos">Upload Photos (optional)</label>
+                <input type="file" id="photos" name="photos" multiple>
+              </fieldset>
+
+              <!-- Cost Estimate & Payment Section -->
+              <fieldset>
+                <legend>Cost Estimate & Payment</legend>
+                <p id="estimated-cost">Your estimated cost is <strong>$0.00</strong> based on the distance and urgency selected.</p>
+
+                <div class="mb-3" style="max-width: 250px;">
+                  <label class="form-label">Promo Code (optional)</label>
+                  <input type="text" class="form-control" placeholder="Enter code">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Payment Options</label>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="payment" id="payLater">
+                      <label class="form-check-label" for="payLater">Pay upon service completion</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="payment" id="payNow">
+                      <label class="form-check-label" for="payNow">Pay now</label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Submission & Confirmation -->
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="agreeTerms">
+                <label class="form-check-label" for="agreeTerms">
+                    I agree to the <a href="#">Terms & Conditions</a> and confirm the details provided are accurate.
+                </label>
+              </div>
+              <button class="btn btn-warning w-100 fw-bold">🚗 Request Towing Now</button>
+            </form>
+            <footer class="text-center mt-5">
+              <p class="text-muted">© 2025 Towing Service. All Rights Reserved.</p>
+          </footer>
+          
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <!-- Post-Submission Content -->
+  <section class="confirmation" style="display: none;">
+    <h2>Thank you! A towing professional is on their way.</h2>
+    <p>You’ll receive a confirmation via SMS/email shortly.</p>
+    <button id="track-towing"><i class="fas fa-map-marker-alt"></i> Track Your Towing Truck in Real-Time</button>
+  </section>
+
+  <!-- will get back to you -->
+  <div class="service-body">
+    <!-- Service Request Form -->
+    <form class="service-form">
+      <!-- Customer Information Section -->
+      <fieldset>
+        <legend>Customer Information</legend>
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" required>
+  
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </fieldset>
+  
+      <!-- Vehicle Details Section -->
+      <fieldset>
+        <legend>Vehicle Details</legend>
+        <label for="car-make">Car Make & Model</label>
+        <input type="text" id="car-make" name="car-make" required>
+  
+        <label for="year">Year of Manufacture</label>
+        <input type="number" id="year" name="year" min="1900" max="2023" required>
+  
+        <label for="license-plate">License Plate Number</label>
+        <input type="text" id="license-plate" name="license-plate" required>
+  
+        <label for="vin">VIN (Vehicle Identification Number)</label>
+        <input type="text" id="vin" name="vin">
+  
+        <label for="mileage">Current Mileage</label>
+        <input type="number" id="mileage" name="mileage">
+      </fieldset>
+  
+      <!-- Service/Repair Details Section -->
+      <fieldset>
+        <legend>Service/Repair Details</legend>
+        <label for="service-type">Type of Service Needed</label>
+        <select id="service-type" name="service-type" required>
+          <option value="">Select a service</option>
+          <option value="towing">Towing</option>
+          <option value="oil-change">Oil Change</option>
+          <option value="brake-repair">Brake Repair</option>
+          <option value="engine-diagnostics">Engine Diagnostics</option>
+          <option value="battery-replacement">Battery Replacement</option>
+          <option value="tire-services">Tire Services</option>
+          <option value="transmission-repair">Transmission Repair</option>
+          <option value="general-maintenance">General Maintenance</option>
+          <option value="other">Other</option>
+        </select>
+  
+        <div id="other-service" style="display: none;">
+          <label for="other-details">Please specify</label>
+          <input type="text" id="other-details" name="other-details">
+        </div>
+  
+        <label for="service-date">Preferred Service Date & Time</label>
+        <input type="datetime-local" id="service-date" name="service-date" required>
+  
+        <label for="urgency">Urgency Level</label>
+        <select id="urgency" name="urgency" required>
+          <option value="standard">Standard (within 48 hours)</option>
+          <option value="urgent">Urgent (within 24 hours)</option>
+          <option value="emergency">Emergency (ASAP)</option>
+        </select>
+      </fieldset>
+  
+      <!-- Towing Details Section (Conditional) -->
+      <fieldset id="towing-details" style="display: none;">
+        <legend>Towing Details</legend>
+        <label for="pickup-location">Pick-Up Location</label>
+        <input type="text" id="pickup-location" name="pickup-location">
+  
+        <label for="dropoff-location">Drop-Off Location</label>
+        <input type="text" id="dropoff-location" name="dropoff-location">
+  
+        <label for="distance">Distance (miles)</label>
+        <input type="number" id="distance" name="distance" readonly>
+  
+        <label for="special-instructions">Special Instructions</label>
+        <textarea id="special-instructions" name="special-instructions"></textarea>
+      </fieldset>
+  
+      <!-- Additional Information Section -->
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="issue-description">Describe the Issue</label>
+        <textarea id="issue-description" name="issue-description" required></textarea>
+  
+        <label for="photos">Upload Photos (optional)</label>
+        <input type="file" id="photos" name="photos" multiple>
+      </fieldset>
+  
+      <!-- Cost Estimate Section -->
+      <fieldset>
+        <legend>Cost Estimate</legend>
+        <p>You’ll receive a detailed quote shortly.</p>
+        <label for="discount-code">Discount Code (if available)</label>
+        <input type="text" id="discount-code" name="discount-code">
+      </fieldset>
+  
+      <!-- Submission & Confirmation -->
+      <fieldset>
+        <label>
+          <input type="checkbox" id="terms" name="terms" required>
+          I agree to the <a href="#">Terms & Conditions</a> of service.
+        </label>
+        <button type="submit">Request Service</button>
+      </fieldset>
+    </form>
+  
+    <!-- Optional Enhancements -->
+    <div class="enhancements">
+      <button class="live-chat-btn"><i class="fas fa-comment"></i> Live Chat</button>
+      <div class="faq-sidebar">
+        <h3>FAQs</h3>
+        <ul>
+          <li><a href="#">What services do you offer?</a></li>
+          <li><a href="#">How long does a repair take?</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+  <script src="script.js">
+        document.addEventListener("DOMContentLoaded", function () {
+
+var popup = document.getElementById("popupWindow");
+var openPopupBtn = document.getElementById("openPopUp");
+var closeBtn = document.getElementById("closeBtn");
+
+var popupsign = document.getElementById("popupsignup");
+var signupBtn = document.getElementById("signup");
+var goBackToLoginBtn = document.getElementById("goBackToLogin");
+
+var closeBtns = document.querySelectorAll(".close");
+
+var signupForm = document.getElementById("signupForm");
+var signupMessage = document.getElementById("signupMessage");
+
+popup.style.display = "none";
+popupsign.style.display = "none";
+
+if (openPopupBtn) {
+    openPopupBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        popup.style.display = "flex";
+        popupsign.style.display = "none";
+    });
+}
+// Elements for Reset Password popup
+var popupReset = document.getElementById("popupResetPassword");
+var forgotPasswordBtn = document.getElementById("forgotPassword"); // Open reset password
+var goBackToLoginBtns = document.querySelectorAll(".back-to-login"); // Back to login
+var resetPasswordForm = document.getElementById("resetPasswordForm");
+var closeBtns = document.querySelectorAll(".close");
+// Open forgot password popup
+if (forgotPasswordBtn) {
+forgotPasswordBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    popup.style.display = "none";
+    popupsign.style.display = "none";
+    popupReset.style.display = "flex";
+});
+}
+
+// Switch back to login popup from reset password
+goBackToLoginBtns.forEach(function (btn) {
+btn.addEventListener("click", function (event) {
+    event.preventDefault();
+    popup.style.display = "flex";
+    popupsign.style.display = "none";
+    popupReset.style.display = "none";
+});
+});
+
+// Handle password reset form submission
+if (resetPasswordForm) {
+resetPasswordForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    alert("Password reset link has been sent to your email!");
+    popupReset.style.display = "none"; // Close popup after submitting
+    popup.style.display = "flex"; // Show login form again
+});
+}
+
+if (signupBtn) {
+    signupBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        popup.style.display = "none"; 
+        popupsign.style.display = "flex";
+    });
+}
+closeBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        popup.style.display = "none";
+        popupsign.style.display = "none";
+        popupReset.style.display = "none";
+    });
+});
+
+// Switch back to login form
+if (goBackToLoginBtn) {
+    goBackToLoginBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        popupsign.style.display = "none"; // Hide signup
+        popup.style.display = "flex"; // Show login again
+    });
+}
+if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
+        popupsign.style.display = "none";
+    });
+}
+
+window.addEventListener("click", function (event) {
+    if (event.target === popup || event.target === popupsign) {
+        popup.style.display = "none";
+        popupsign.style.display = "none";
+    }
+});
+if (signupForm) {
+    signupForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form from reloading the page
+
+        // Simulating successful signup
+        signupMessage.textContent = "Sign Up Successful!";
+        signupMessage.style.color = "green";
+        
+        // Redirect to dashboard after 2 seconds
+        setTimeout(function () {
+            window.location.href = "dashboard.html"; // Change this to your actual dashboard page
+        }, 2000);
+    });
+}
+});
+
+  </script>
+</body>
+</html>
